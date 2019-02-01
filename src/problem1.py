@@ -139,13 +139,29 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
-    w = 1
+    '''w = 1
     while True:
-        if(fibonacci(w) < n and fibonacci(w+1) > n):
-            return fibonacci(w)
-        w += 1
-
-
+        if(fibonacci(w) < n):
+            if(fibonacci((w+1)) > n):
+                return fibonacci(w)
+        w += 1'''
+    w = 0
+    x = 1
+    while True:
+        if((w+x) > n):
+            if(x > w):
+                if(x == n):
+                    return w
+                return x
+            if(w > x):
+                if (w == n):
+                    return x
+                return w
+        else:
+            if (x > w):
+                w = w + x
+            else:
+                x = x + w
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
